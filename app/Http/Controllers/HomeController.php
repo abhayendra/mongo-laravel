@@ -18,12 +18,11 @@ class HomeController extends Controller
     public function index()
     {
         $user = new User;
-
         $user->name = 'abhayendra';
-
         $user->save();
 
-       $user =  User::all()->toJson();
+       $user =  User::all()->toArray();
+
         echo "<pre>";
         print_r($user);
         echo "</pre>";
